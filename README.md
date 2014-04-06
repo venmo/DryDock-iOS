@@ -47,4 +47,5 @@ We'd love to see your ideas for improving DryDock! The best way to contribute is
 Please make sure to follow our general coding style!
 
 ### Dry Dock on other platforms
-We'd love to create DryDock for Android too -- and any other platforms! Please feel free to do so
+
+We'd love to create DryDock for Android too -- and any other platforms! If you're interested in working on this then raise an Issue with a link to the repo so that we can make sure multiple people aren't working on the same port!
