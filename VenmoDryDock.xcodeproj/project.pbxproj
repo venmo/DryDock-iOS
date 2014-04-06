@@ -100,7 +100,7 @@
 		83FC5C4918D4B8A1005A3B3E /* VenmoDryDock */ = {
 			isa = PBXGroup;
 			children = (
-				83FC5C9F18D7D364005A3B3E /* BuildsTableView */,
+				83FC5C9F18D7D364005A3B3E /* Builds List */,
 				83FC5C8A18D4CCFE005A3B3E /* Model */,
 				83FC5C8518D4C575005A3B3E /* Libraries */,
 				83FC5C9A18D783B3005A3B3E /* Resources */,
@@ -158,7 +158,7 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		83FC5C9F18D7D364005A3B3E /* BuildsTableView */ = {
+		83FC5C9F18D7D364005A3B3E /* Builds List */ = {
 			isa = PBXGroup;
 			children = (
 				83FC5CA018D7D364005A3B3E /* VDDBuildsTableViewController.h */,
@@ -167,7 +167,8 @@
 				83FC5CA318D7D364005A3B3E /* VDDTableViewCell.m */,
 				83FC5CA418D7D364005A3B3E /* VDDTableViewCell.xib */,
 			);
-			path = BuildsTableView;
+			name = "Builds List";
+			path = BuildsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
