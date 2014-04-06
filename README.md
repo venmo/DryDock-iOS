@@ -2,9 +2,10 @@
 An internal installer app for iOS.
 
 ### What is drydock?
-DryDock is an iOS application that we built at Venmo to manage and install all of our internal builds, allow employees to download new experimental apps at any time and to easily share builds designed for a broader audience with their friends. It also allows our customer support team to install any version of the App that we've ever released to the store.
+DryDock is an iOS application that we built at Venmo to manage and install all of our internal builds, allow employees to download new experimental apps at any time and to easily share builds designed for a broader audience with their friends. 
 
-### What does it look like?
+DryDock also allows our customer support team to install any version of the App that we've ever released to the store.
+
 <img src="http://f.cl.ly/items/091P1Q0W250H2b3e3T1S/DryDockScreen.png" width="320" />
 
 ### Getting set up with DryDock
@@ -36,6 +37,9 @@ share_url   :: The url for a download page for the app
 
 #### 4. Open DryDock on your iPhone
 You should see the apps that you configured.
+
+#### 5. Share & maintain
+Now you can share this with your team! We're working on polishing up some tooling that we've built to update DryDock builds from your CI environment or build scripts. Hopefully we'll share this soon.
 
 ### License
 DryDock is released under the MIT License
