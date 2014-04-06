@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Builds Table View Controller - Internal Builds-->
+        <scene sceneID="ACK-PD-OvU">
+            <objects>
+                <tableViewController title="Internal Builds" id="uQD-rI-teo" customClass="VDDBuildsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kST-K0-4PG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="K88-Yv-R3T">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K88-Yv-R3T" id="WdI-rV-BaO">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uQD-rI-teo" id="EeX-iJ-IQY"/>
+                            <outlet property="delegate" destination="uQD-rI-teo" id="aul-f8-GbK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Internal Builds" id="zOC-l8-bgB"/>
+                    <keyCommands/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="distributionType">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peh-0r-S0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="23"/>
+        </scene>
+        <!--Navigation Controller - Internal Builds-->
+        <scene sceneID="HcT-MI-Qej">
+            <objects>
+                <navigationController title="Internal Builds" definesPresentationContext="YES" id="bYA-jD-SGU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Internal" image="VDDTabBarIconInternal" id="u1e-5L-l1D"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vcc-3r-Rd1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uQD-rI-teo" kind="relationship" relationship="rootViewController" id="qY5-dQ-YHy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSM-Fr-qVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="23"/>
+        </scene>
+        <!--Builds Table View Controller - AppStore Builds-->
+        <scene sceneID="WIP-xg-496">
+            <objects>
+                <tableViewController title="AppStore Builds" id="m1q-2B-VIl" customClass="VDDBuildsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WAI-UA-d4m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iFO-W4-bDG">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iFO-W4-bDG" id="mqk-Ke-clA">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m1q-2B-VIl" id="bDM-hm-gP3"/>
+                            <outlet property="delegate" destination="m1q-2B-VIl" id="qCW-Rx-Bqh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="App Store Builds" id="82A-QA-1N0"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="distributionType">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cl2-Cd-vhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="693"/>
+        </scene>
+        <!--Navigation Controller - AppStore Builds-->
+        <scene sceneID="YSx-4X-tvI">
+            <objects>
+                <navigationController title="AppStore Builds" definesPresentationContext="YES" id="Bl4-io-dQ3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="App Store" image="VDDTabBarIconAppStore" id="Z7h-1E-pvt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8fk-By-zrd">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="m1q-2B-VIl" kind="relationship" relationship="rootViewController" id="fN3-60-97i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fob-Vi-MmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="693"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vex-rW-GRa">
+            <objects>
+                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bYA-jD-SGU" kind="relationship" relationship="viewControllers" id="atk-xb-ylH"/>
+                        <segue destination="Bl4-io-dQ3" kind="relationship" relationship="viewControllers" id="BQL-0j-8FE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-240" y="23"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="VDDTabBarIconAppStore" width="32" height="32"/>
+        <image name="VDDTabBarIconInternal" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

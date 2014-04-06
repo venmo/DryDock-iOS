@@ -1,0 +1,16 @@
+PODS:
+  - Facebook-iOS-SDK (3.13.0)
+  - Parse (1.2.18):
+    - Facebook-iOS-SDK (~> 3.11)
+  - VENVersionTracker (0.1.0)
+
+DEPENDENCIES:
+  - Parse
+  - VENVersionTracker
+
+SPEC CHECKSUMS:
+  Facebook-iOS-SDK: 5788541337dc88265bc940cb5ffb05915f9b64e3
+  Parse: 6dd57f2af9f89dc6facc755cec4e96f8b739b1fb
+  VENVersionTracker: 678c673a653280c1cf5a260d0f6fecd8d523c715
+
+COCOAPODS: 0.31.1

@@ -1,0 +1,11 @@
+.DS_Store
+xcuserdata
+VenmoIOS/Pods/*
+VenmoClient/Pods/*
+Pods/*
+build/*
+dogbuild/*
+cibuild/*
+*.xccheckout
+
+/VenmoDryDock.xcworkspace/xcuserdata/chris.xcuserdatad/UserInterfaceState.xcuserstate
