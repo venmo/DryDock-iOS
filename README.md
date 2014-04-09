@@ -33,7 +33,7 @@ install_url :: The itms-services:// link to install the app. This can be a hocke
 share_url   :: The url for a download page for the app
 ```
 
-<img src="https://photos-3.dropbox.com/t/0/AABbyhZ5pRQE1s94VvgVlcxBvGZakNCqKuHOaKbD8tIWPg/12/6397232/png/1024x768/3/1396818000/0/2/Screenshot%202014-04-06%2015.56.10.png/ywbbtshlT9lLd4uwbB5UTYj6c8QZYpaVHJ3ak8NyXag" width="100%" />
+<img src="http://f.cl.ly/items/0V3Y1j2n1q1I300E0M0m/datatable.png" width="100%" />
 
 #### 4. Open DryDock on your iPhone
 You should see the apps that you configured.
