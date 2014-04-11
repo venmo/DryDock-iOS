@@ -92,7 +92,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([indexPath isEqual:self.lastSelectedIndexPath]) {
         PFObject *app = self.apps[indexPath.row];
-        [VDDTableViewCell heightWithDetailsForApp:app];
+        return [VDDTableViewCell heightWithDetailsForApp:app];
     }
     return [VDDTableViewCell heightWithoutDetails];
 }
@@ -108,7 +108,19 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *oldIndexPath   = self.lastSelectedIndexPath;
+    if (![self.lastSelectedIndexPath isEqual:indexPath]) {
+        self.lastSelectedIndexPath  = indexPath;
+    }
+    else {
+        self.lastSelectedIndexPath = nil;
+    }
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSMutableArray *indexPathsToReload = [[NSMutableArray alloc] initWithObjects:indexPath, nil];
+    if (oldIndexPath && ![oldIndexPath isEqual:indexPath]) {
+        [indexPathsToReload addObject:oldIndexPath];
+    }
+    [self.tableView reloadRowsAtIndexPaths:indexPathsToReload withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

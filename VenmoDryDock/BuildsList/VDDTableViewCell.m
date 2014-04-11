@@ -44,7 +44,9 @@ const CGFloat VDDDetailsLabelWidth = 290;
     self.appDescriptionLabel.text = app[VDDAppKeyDescription];
 
     self.appIconView.image = [UIImage imageNamed:@"VenmoIcon"];
-
+    
+    [self configureDetailsLabel];
+    
     PFFile *image = app[VDDAppKeyImage];
     [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (data) {
@@ -53,7 +55,7 @@ const CGFloat VDDDetailsLabelWidth = 290;
     }];
 }
 
-- (void)configureMoreDetailsLabel {
+- (void)configureDetailsLabel {
     if (self.appDetailsLabel) {
         [self.appDetailsLabel removeFromSuperview];
         self.appDetailsLabel = nil;
