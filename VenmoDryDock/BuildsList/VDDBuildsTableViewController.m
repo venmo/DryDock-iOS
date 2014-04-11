@@ -4,6 +4,7 @@
 @interface VDDBuildsTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *apps;
+@property (nonatomic, strong) NSIndexPath *lastSelectedIndexPath;
 
 @end
 
@@ -89,7 +90,11 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [VDDTableViewCell height];
+    if ([indexPath isEqual:self.lastSelectedIndexPath]) {
+        PFObject *app = self.apps[indexPath.row];
+        [VDDTableViewCell heightWithDetailsForApp:app];
+    }
+    return [VDDTableViewCell heightWithoutDetails];
 }
 
 
@@ -105,13 +110,5 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
 
 @end

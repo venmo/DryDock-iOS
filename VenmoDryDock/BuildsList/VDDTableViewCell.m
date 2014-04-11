@@ -1,5 +1,10 @@
 #import "VDDTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "NSString+DryDock.h"
+
+const CGFloat VDDDetailsBottomBuffer = 10;
+const CGFloat VDDDetailsLabelWidth = 290;
+#define VDDDetailsFont [UIFont fontWithName:@"HelveticaNeue-Light" size:13]
 
 @interface VDDTableViewCell ()
 
@@ -48,6 +53,29 @@
     }];
 }
 
+- (void)configureMoreDetailsLabel {
+    if (self.appDetailsLabel) {
+        [self.appDetailsLabel removeFromSuperview];
+        self.appDetailsLabel = nil;
+    }
+    PFObject *app = self.app;
+    if ([app[VDDAppKeyDetails] hasContent] && CGRectGetHeight(self.frame) > [VDDTableViewCell heightWithoutDetails]) {
+        self.appDetailsLabel                = [[UILabel alloc] init];
+        self.appDetailsLabel.numberOfLines  = 0;
+        self.appDetailsLabel.text           = [app[VDDAppKeyDetails] stringByReplacingEscapedNewlines];
+        self.appDetailsLabel.font           = VDDDetailsFont;
+        CGFloat heightForDetails            = [[self class] heightForDetails:app[VDDAppKeyDetails]];
+        self.appDetailsLabel.frame          = CGRectMake(CGRectGetMinX(self.appIconView.frame),
+                                                         [[self class] heightWithoutDetails],
+                                                         VDDDetailsLabelWidth,
+                                                         heightForDetails);
+        [self.contentView addSubview:self.appDetailsLabel];
+    }
+    
+}
+
+
+#pragma mark - IBActions
 
 - (IBAction)installApp:(id)sender {
     NSString *installUrl = self.app[VDDAppKeyInstallUrl];
@@ -74,8 +102,28 @@
 }
 
 
-+ (CGFloat)height {
++ (CGFloat)heightWithoutDetails {
     return 85;
+}
+
++ (CGFloat)heightWithDetailsForApp:(PFObject *)app {
+    if (![self detailsSupportedByApp:app]) {
+        return [self heightWithoutDetails];
+    }
+    return [self heightWithoutDetails] + [self heightForDetails:app[VDDAppKeyDetails]] + VDDDetailsBottomBuffer;
+}
+
++ (BOOL)detailsSupportedByApp:(PFObject *)app {
+    return (app[VDDAppKeyDetails] && [app[VDDAppKeyDetails] hasContent]);
+}
+
++ (CGFloat)heightForDetails:(NSString *)detailsString {
+    NSDictionary *attributes = @{NSFontAttributeName: VDDDetailsFont};
+    NSString *moreDetails = [detailsString stringByReplacingEscapedNewlines];
+    return CGRectGetHeight([moreDetails boundingRectWithSize:CGSizeMake(VDDDetailsLabelWidth, MAXFLOAT)
+                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                  attributes:attributes
+                                                     context:nil]);
 }
 
 @end
