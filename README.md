@@ -20,7 +20,7 @@ Go to http://parse.com. Sign up if you haven't already and then create a new iOS
 - Run `pod install`
 - Open `VenmoDryDock.xcworkspace`
 - Set your Parse `applicationId` and `clientKey` in `VDDAppDelegate.m`
-- (Optional) Set up `VENUpdateTracker` or delete the init code in the app delegate
+- (Optional) Set up `VENVersionTracker` or delete the init code in the app delegate
 - Run it on the Simulator or a device
 
 #### 3. Go setup your data
