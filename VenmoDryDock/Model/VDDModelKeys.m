@@ -11,6 +11,7 @@ void createDemoObject() {
         PFObject *testObject = [PFObject objectWithClassName:VDDModelApp];
         testObject[VDDAppKeyName]           = @"Venmo";
         testObject[VDDAppKeyDescription]    = @"Venmo Dogfood Builds";
+        testObject[VDDAppKeyDetails]        = @"Connect with people, send money for free, and cash out to any bank overnight.";
         testObject[VDDAppKeyType]           = @(1);
         testObject[VDDAppKeyVersionNumber]  = @"1";
         testObject[VDDAppKeySharable]       = @(YES);
