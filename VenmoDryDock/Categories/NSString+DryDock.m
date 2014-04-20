@@ -9,7 +9,7 @@
 
 - (BOOL)hasContent {
     NSCharacterSet *set = [NSCharacterSet whitespaceCharacterSet];
-    return ([[self stringByTrimmingCharactersInSet: set] length] == 0) ? NO : YES;
+    return [[self stringByTrimmingCharactersInSet:set] length] ? YES : NO;
 }
 
 @end
