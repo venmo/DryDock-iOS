@@ -15,7 +15,8 @@ const CGFloat VDDDetailsLabelWidth = 290;
 @implementation VDDTableViewCell
 
 - (void)awakeFromNib {
-    
+
+    self.contentView.clipsToBounds = YES;
     self.appIconView.layer.cornerRadius = 12;
     self.appIconView.layer.masksToBounds = YES;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -28,6 +29,11 @@ const CGFloat VDDDetailsLabelWidth = 290;
 	[self.shareButton setTitle:@"Shared" forState:UIControlStateDisabled];
 	[self.shareButton setConfirmationTitle:@"-" forState:UIControlStateNormal];
     self.shareButton.shouldConfirmAction = NO;
+
+    self.appDetailsLabel                = [[UILabel alloc] init];
+    self.appDetailsLabel.numberOfLines  = 0;
+    self.appDetailsLabel.font           = VDDDetailsFont;
+    [self.contentView addSubview:self.appDetailsLabel];
 }
 
 
@@ -55,24 +61,18 @@ const CGFloat VDDDetailsLabelWidth = 290;
 }
 
 - (void)configureDetailsLabel {
-    if (self.appDetailsLabel) {
-        [self.appDetailsLabel removeFromSuperview];
-        self.appDetailsLabel = nil;
-    }
     PFObject *app = self.app;
     if ([app[VDDAppKeyDetails] hasContent] && CGRectGetHeight(self.frame) > [VDDTableViewCell heightWithoutDetails]) {
-        self.appDetailsLabel                = [[UILabel alloc] init];
-        self.appDetailsLabel.numberOfLines  = 0;
         self.appDetailsLabel.text           = [app[VDDAppKeyDetails] stringByReplacingEscapedNewlines];
-        self.appDetailsLabel.font           = VDDDetailsFont;
         CGFloat heightForDetails            = [[self class] heightForDetails:app[VDDAppKeyDetails]];
         self.appDetailsLabel.frame          = CGRectMake(CGRectGetMinX(self.appIconView.frame),
                                                          [[self class] heightWithoutDetails],
                                                          VDDDetailsLabelWidth,
                                                          heightForDetails);
-        [self.contentView addSubview:self.appDetailsLabel];
     }
-    
+    else {
+        self.appDetailsLabel.text           = @"";
+    }
 }
 
 
