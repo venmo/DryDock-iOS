@@ -7,6 +7,7 @@ typedef NS_ENUM(NSUInteger, VDDAppDistributionType) {
 
 #define VDDAppKeyName @"name"
 #define VDDAppKeyDescription @"description"
+#define VDDAppKeyDetails @"details"
 #define VDDAppKeyImage @"image"
 #define VDDAppKeyInstallUrl @"install_url"
 #define VDDAppKeyShareUrl @"share_url"

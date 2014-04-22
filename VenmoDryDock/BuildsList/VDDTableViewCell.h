@@ -6,6 +6,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *appIconView;
 @property (nonatomic, strong) IBOutlet UILabel *appNameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *appDescriptionLabel;
+@property (nonatomic, strong) UILabel *appDetailsLabel;
 
 @property (nonatomic, strong) IBOutlet DCTConfirmationButton *installButton;
 @property (nonatomic, strong) IBOutlet DCTConfirmationButton *shareButton;
@@ -14,6 +15,7 @@
 
 - (void)configureForApp:(PFObject *)app;
 
-+ (CGFloat)height;
++ (CGFloat)heightWithDetailsForApp:(PFObject *)app;
++ (CGFloat)heightWithoutDetails;
 
 @end

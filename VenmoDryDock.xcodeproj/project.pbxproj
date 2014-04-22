@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F796BEAF20E489486DDD83C /* libPods-VenmoDryDock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7F41E3595F466F9F97020D /* libPods-VenmoDryDock.a */; };
+		3A9E32BF18F8522F0090BEF1 /* NSString+DryDock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E32BE18F8522F0090BEF1 /* NSString+DryDock.m */; };
 		83FC5C4418D4B8A1005A3B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FC5C4318D4B8A1005A3B3E /* Foundation.framework */; };
 		83FC5C4618D4B8A1005A3B3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FC5C4518D4B8A1005A3B3E /* CoreGraphics.framework */; };
 		83FC5C4818D4B8A1005A3B3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FC5C4718D4B8A1005A3B3E /* UIKit.framework */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A9E32BD18F8522F0090BEF1 /* NSString+DryDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+DryDock.h"; path = "Categories/NSString+DryDock.h"; sourceTree = "<group>"; };
+		3A9E32BE18F8522F0090BEF1 /* NSString+DryDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DryDock.m"; path = "Categories/NSString+DryDock.m"; sourceTree = "<group>"; };
 		83FC5C4018D4B8A1005A3B3E /* VenmoDryDock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenmoDryDock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FC5C4318D4B8A1005A3B3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83FC5C4518D4B8A1005A3B3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A9E32BC18F852000090BEF1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E32BD18F8522F0090BEF1 /* NSString+DryDock.h */,
+				3A9E32BE18F8522F0090BEF1 /* NSString+DryDock.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		83FC5C3718D4B8A1005A3B3E = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 		83FC5C4918D4B8A1005A3B3E /* VenmoDryDock */ = {
 			isa = PBXGroup;
 			children = (
+				3A9E32BC18F852000090BEF1 /* Categories */,
 				83FC5C9F18D7D364005A3B3E /* Builds List */,
 				83FC5C8A18D4CCFE005A3B3E /* Model */,
 				83FC5C8518D4C575005A3B3E /* Libraries */,
@@ -280,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83FC5C8918D4C575005A3B3E /* DCTConfirmationButton.m in Sources */,
+				3A9E32BF18F8522F0090BEF1 /* NSString+DryDock.m in Sources */,
 				83FC5CA518D7D364005A3B3E /* VDDBuildsTableViewController.m in Sources */,
 				83FC5CA618D7D364005A3B3E /* VDDTableViewCell.m in Sources */,
 				83FC5C5018D4B8A1005A3B3E /* main.m in Sources */,
