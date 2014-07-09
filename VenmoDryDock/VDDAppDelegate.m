@@ -1,11 +1,12 @@
 #import "VDDAppDelegate.h"
 #import <VENVersionTracker/VENVersionTracker.h>
+#import "VDDConstants.h"
 
 @implementation VDDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Parse setApplicationId:@"YOUR_PARSE_APP_ID"
-                  clientKey:@"YOUR_PARSE_CLIENT_KEY"];
+    [Parse setApplicationId:VDDParseAppId
+                  clientKey:VDDParseClientKey];
     
     [self startTrackingVersion];
     
@@ -27,8 +28,8 @@
         "min-version-number":0.1.0
      }
      */
-    [VENVersionTracker beginTrackingVersionForChannel:@"YOUR_CHANNEL_NAME"
-                                       serviceBaseUrl:@"http://YOUR_BASE_URL"
+    [VENVersionTracker beginTrackingVersionForChannel:VDDChannelName
+                                       serviceBaseUrl:VDDBaseUrl
                                          timeInterval:1800
                                           withHandler:^(VENVersionTrackerState state, VENVersion *version) {
                                               dispatch_sync(dispatch_get_main_queue(), ^{
