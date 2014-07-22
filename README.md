@@ -46,7 +46,7 @@ DryDock is released under the MIT License
 
 ### Contributing
 
-We'd love to see your ideas for improving DryDock! The best way to contribute is by submitting a pull request. We'll do our best to respond to your patch as soon as possible. You can also submit a [new Github issue](https://github.com/venmo/VENAppSwitchSDK/issues/new) if you find bugs or have questions. :octocat:
+We'd love to see your ideas for improving DryDock! The best way to contribute is by submitting a pull request. We'll do our best to respond to your patch as soon as possible. You can also submit a [new Github issue](https://github.com/venmo/DryDock-iOS/issues/new) if you find bugs or have questions. :octocat:
 
 Please make sure to follow our general coding style!
 
