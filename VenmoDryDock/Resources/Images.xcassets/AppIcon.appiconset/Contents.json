@@ -3,19 +3,19 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon_57x57.png",
+      "filename" : "DryDock_Icon58x58.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon_57x57@2x.png",
+      "filename" : "DryDock_Icon80x80.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon_60x60@2x.png",
+      "filename" : "DryDock_Icon120x120.png",
       "scale" : "2x"
     }
   ],
