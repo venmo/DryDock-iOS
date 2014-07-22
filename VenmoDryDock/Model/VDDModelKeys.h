@@ -25,21 +25,19 @@ typedef NS_ENUM(NSUInteger, VDDAppDistributionType) {
     VDDAppDistributionTypePublic = 2
 };
 
-#define VDDModelApp @"VDDModelApp"
+extern NSString * const VDDModelApp;
+extern NSString * const VDDAppKeyName;
+extern NSString * const VDDAppKeyDescription;
+extern NSString * const VDDAppKeyDetails;
+extern NSString * const VDDAppKeyImage;
+extern NSString * const VDDAppKeyInstallUrl;
+extern NSString * const VDDAppKeyShareUrl;
+extern NSString * const VDDAppKeyVersionNumber;
+extern NSString * const VDDAppKeySharable;
+extern NSString * const VDDAppKeyType;
 
-#define VDDAppKeyName @"name"
-#define VDDAppKeyDescription @"description"
-#define VDDAppKeyDetails @"details"
-#define VDDAppKeyImage @"image"
-#define VDDAppKeyInstallUrl @"install_url"
-#define VDDAppKeyShareUrl @"share_url"
-#define VDDAppKeyVersionNumber @"version_number"
-#define VDDAppKeySharable @"sharable"
-#define VDDAppKeyType @"type"
-
-
-#define VDDModelUser @"VDDModelUser"
-#define VDDUserKeyAdvertisingID @"advertising_id"
-#define VDDUserKeyPushToken @"push_token"
+extern NSString * const VDDModelUser;
+extern NSString * const VDDUserKeyAdvertisingID;
+extern NSString * const VDDModelUser;
 
 void createDemoObject();

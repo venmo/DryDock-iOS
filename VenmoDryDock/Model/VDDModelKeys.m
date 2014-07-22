@@ -22,6 +22,21 @@
 
 #import "VDDModelKeys.h"
 
+NSString * const VDDModelApp = @"VDDModelApp";
+NSString * const VDDAppKeyName = @"name";
+NSString * const VDDAppKeyDescription = @"description";
+NSString * const VDDAppKeyDetails = @"details";
+NSString * const VDDAppKeyImage = @"image";
+NSString * const VDDAppKeyInstallUrl = @"install_url";
+NSString * const VDDAppKeyShareUrl = @"share_url";
+NSString * const VDDAppKeyVersionNumber = @"version_number";
+NSString * const VDDAppKeySharable = @"sharable";
+NSString * const VDDAppKeyType = @"type";
+
+NSString * const VDDModelUser = @"VDDModelUser";
+NSString * const VDDUserKeyAdvertisingID = @"advertising_id";
+NSString * const VDDUserKeyPushToken = @"push_token";
+
 void createDemoObject() {
     NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"VenmoIcon"], 1.0);
     PFFile *file = [PFFile fileWithName:@"image.png" data:imageData];
