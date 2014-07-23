@@ -1,4 +1,4 @@
-# DryDock
+# DryDock [![Build Status](https://travis-ci.org/venmo/DryDock-iOS.svg?branch=master)](https://travis-ci.org/venmo/DryDock-iOS)
 An internal installer app for iOS.
 
 ### What is DryDock?
