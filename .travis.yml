@@ -1,5 +1,6 @@
 language: objective-c
 before_install:
+- cp VenmoDryDock/VDDConstants.h.sample VenmoDryDock/VDDConstants.h
 - gem i cocoapods --no-ri --no-rdoc
 - brew uninstall xctool; brew install xctool --HEAD;
 xcode_workspace: VenmoDryDock.xcworkspace
