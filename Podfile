@@ -5,3 +5,8 @@ target :VenmoDryDock do
   pod 'Parse'
   pod 'VENVersionTracker'
 end
+
+target :VenmoDryDockTests do
+  pod 'Kiwi', '~>2.3'
+end
+
