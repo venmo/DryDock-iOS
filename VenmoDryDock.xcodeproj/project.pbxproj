@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07264EE6196D936000B6E821 /* VDDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VDDConstants.h; sourceTree = "<group>"; };
 		3A9E32BD18F8522F0090BEF1 /* NSString+DryDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+DryDock.h"; path = "Categories/NSString+DryDock.h"; sourceTree = "<group>"; };
 		3A9E32BE18F8522F0090BEF1 /* NSString+DryDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DryDock.m"; path = "Categories/NSString+DryDock.m"; sourceTree = "<group>"; };
 		432B5753CFC24CA4BD42964A /* Pods-VenmoDryDockTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenmoDryDockTests.xcconfig"; path = "Pods/Pods-VenmoDryDockTests.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 				83FC5C4C18D4B8A1005A3B3E /* InfoPlist.strings */,
 				83FC5C4F18D4B8A1005A3B3E /* main.m */,
 				83FC5C5118D4B8A1005A3B3E /* VenmoDryDock-Prefix.pch */,
+				07264EE6196D936000B6E821 /* VDDConstants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

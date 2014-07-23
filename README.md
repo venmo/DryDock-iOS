@@ -18,9 +18,10 @@ Go to http://parse.com. Sign up if you haven't already and then create a new iOS
 #### 2. Build DryDock iOS
 - Check out this repo
 - Run `pod install`
+- Run `cp VenmoDryDock/VDDConstants.h.sample VenmoDryDock/VDDConstants.h`
 - Open `VenmoDryDock.xcworkspace`
-- Set your Parse `applicationId` and `clientKey` in `VDDAppDelegate.m`
-- (Optional) Set up `VENVersionTracker` or delete the init code in the app delegate
+- Set your Parse `applicationId` and `clientKey` in `VDDConstants.h`
+- (Optional) Set up `VENVersionTracker` or delete the set up code in `VDDAppDelegate.m`
 - Run it on the Simulator or a device
 
 #### 3. Go setup your data

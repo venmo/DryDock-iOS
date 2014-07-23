@@ -1,0 +1,13 @@
+//
+//  constants.h
+//  VenmoDryDock
+//
+//  Created by Jurre Stender on 09/07/14.
+//  Copyright (c) 2014 Chris Maddern. All rights reserved.
+//
+
+static NSString *const VDDParseAppId = @"YOUR_PARSE_APP_ID";
+static NSString *const VDDParseClientKey = @"YOUR_PARSE_CLIENT_KEY";
+
+static NSString *const VDDChannelName = @"YOUR_CHANNEL_NAME";
+static NSString *const VDDBaseUrl = @"http://YOUR_BASE_URL";
