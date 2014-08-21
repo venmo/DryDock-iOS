@@ -84,7 +84,7 @@
                 return NSOrderedSame;
             }
             
-            return [obj2[VDDAppKeyVersionNumber] compare:obj1[VDDAppKeyVersionNumber]];
+            return [obj1[VDDAppKeyRank] compare:obj2[VDDAppKeyRank]];
         }] mutableCopy];
 
         

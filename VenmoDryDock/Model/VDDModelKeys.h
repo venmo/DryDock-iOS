@@ -35,6 +35,7 @@ extern NSString * const VDDAppKeyShareUrl;
 extern NSString * const VDDAppKeyVersionNumber;
 extern NSString * const VDDAppKeySharable;
 extern NSString * const VDDAppKeyType;
+extern NSString * const VDDAppKeyRank;
 
 extern NSString * const VDDModelUser;
 extern NSString * const VDDUserKeyAdvertisingID;
