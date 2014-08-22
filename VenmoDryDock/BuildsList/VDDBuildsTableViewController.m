@@ -71,23 +71,28 @@
         if ([objects count] == 0) {
             createDemoObject();
         }
-        
+
         NSMutableArray *newApps = [NSMutableArray array];
         for (PFObject *object in objects) {
             if ([object[VDDAppKeyType] integerValue] == self.distributionType) {
                 [newApps addObject:object];
             }
         }
-        
+
         newApps = [[newApps sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             if (![obj1 respondsToSelector:@selector(objectForKeyedSubscript:)] || ![obj2 respondsToSelector:@selector(objectForKeyedSubscript:)]) {
                 return NSOrderedSame;
             }
-            
-            return [obj1[VDDAppKeyRank] compare:obj2[VDDAppKeyRank]];
+            NSComparisonResult result = [obj1[VDDAppKeyRank] compare:obj2[VDDAppKeyRank]]; // Lower rank closer to top
+            if (result == NSOrderedSame) {
+                return [obj2[VDDAppKeyVersionNumber] compare:obj1[VDDAppKeyVersionNumber]]; // Higher version closer to top
+            }
+            else {
+                return result;
+            }
         }] mutableCopy];
 
-        
+
         self.apps = newApps;
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];
