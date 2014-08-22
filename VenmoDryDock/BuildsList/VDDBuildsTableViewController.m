@@ -80,7 +80,7 @@
         }
         
         newApps = [[newApps sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-            if (!obj1 || !obj2 || ![obj1 respondsToSelector:@selector(objectForKeyedSubscript:)] || ![obj2 respondsToSelector:@selector(objectForKeyedSubscript:)]) {
+            if (![obj1 respondsToSelector:@selector(objectForKeyedSubscript:)] || ![obj2 respondsToSelector:@selector(objectForKeyedSubscript:)]) {
                 return NSOrderedSame;
             }
             
