@@ -32,6 +32,7 @@ NSString * const VDDAppKeyShareUrl = @"share_url";
 NSString * const VDDAppKeyVersionNumber = @"version_number";
 NSString * const VDDAppKeySharable = @"sharable";
 NSString * const VDDAppKeyType = @"type";
+NSString * const VDDAppKeyRank = @"rank";
 
 NSString * const VDDModelUser = @"VDDModelUser";
 NSString * const VDDUserKeyAdvertisingID = @"advertising_id";
@@ -51,6 +52,7 @@ void createDemoObject() {
         testObject[VDDAppKeyDetails]        = @"Connect with people, send money for free, and cash out to any bank overnight.";
         testObject[VDDAppKeyType]           = @(1);
         testObject[VDDAppKeyVersionNumber]  = @"1";
+        testObject[VDDAppKeyRank]           = @(1);
         testObject[VDDAppKeySharable]       = @(YES);
 
         testObject[VDDAppKeyShareUrl]       = @"http://someshareurl/";
