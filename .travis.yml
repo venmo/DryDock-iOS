@@ -1,7 +1,0 @@
-language: objective-c
-before_install:
-- cp VenmoDryDock/VDDConstants.h.sample VenmoDryDock/VDDConstants.h
-- gem i cocoapods --no-ri --no-rdoc
-- gem i xcpretty  --no-ri --no-rdoc
-script:
-- xcodebuild -workspace VenmoDryDock.xcworkspace -scheme VenmoDryDock -sdk iphonesimulator test | xcpretty -c
